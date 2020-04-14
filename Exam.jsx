@@ -32,7 +32,7 @@ Output：9
 */
 
 const func = ( number ) => {
-    let list = new Array(number)
+    let list = ( new Array(number) ).fill()
     const output = list.map( (d, idx) => idx + 1 )
                .filter( d => {
                     if ( (d % 3) === 0 && (d % 5) === 0 ){
@@ -43,7 +43,7 @@ const func = ( number ) => {
                         return true
                     }
                } )
-    return output
+    return output.length
 }
 
 /* 
